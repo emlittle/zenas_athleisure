@@ -18,12 +18,12 @@ style_chosen = st.selectbox('Pick a sweatsuit colour or style:', my_dataframe['c
 
 if style_chosen:
   
-  image = my_dataframe.loc[my_dataframe['color_or_style'] == style_chosen, 'price', 'file_name', 'file_url', 'size_list', 'upsell'].iloc[3]
-  price = my_dataframe.loc[my_dataframe['color_or_style'] == style_chosen, 'price', 'file_name', 'file_url', 'size_list', 'upsell'].iloc[1]
-  size_list = my_dataframe.loc[my_dataframe['color_or_style'] == style_chosen, 'price', 'file_name', 'file_url', 'size_list', 'upsell'].iloc[4]
+  image = my_dataframe.loc[my_dataframe['color_or_style'] == style_chosen, 'price', 'file_name', 'file_url', 'size_list', 'upsell'].iloc[0]
+  #price = my_dataframe.loc[my_dataframe['color_or_style'] == style_chosen, 'price', 'file_name', 'file_url', 'size_list', 'upsell'].iloc[0]
+  #size_list = my_dataframe.loc[my_dataframe['color_or_style'] == style_chosen, 'price', 'file_name', 'file_url', 'size_list', 'upsell'].iloc[0]
   
   st.image(image)
   description = 'Our warm, comfortable,'+style_chosen+' sweatsuit!'
   st.write(description)
-  st.write('Price: $', price)
-  st.write('Sizes Available: ', size_list)
+  #st.write('Price: $', price)
+  #st.write('Sizes Available: ', size_list)
