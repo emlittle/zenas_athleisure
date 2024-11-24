@@ -14,7 +14,7 @@ cursor = cnx.cursor()
 cursor.execute("SELECT * FROM catalog_for_website")
 my_dataframe = pd.DataFrame(cursor.fetchall(), columns=['color_or_style', 'price', 'file_name', 'file_url', 'size_list', 'upsell'])
 
-style_chosen = st.select('Pick a sweatsuit colour or style:', my_dataframe['color_or_style'])
+style_chosen = st.selectbox('Pick a sweatsuit colour or style:', my_dataframe['color_or_style'])
 
 if style_chosen:
   
@@ -22,7 +22,7 @@ if style_chosen:
   price = my_dataframe.loc[my_dataframe['color_or_style'] == style_chosen, 'price', 'file_name', 'file_url', 'size_list', 'upsell'].iloc[1]
   size_list = my_dataframe.loc[my_dataframe['color_or_style'] == style_chosen, 'price', 'file_name', 'file_url', 'size_list', 'upsell'].iloc[4]
   
-  st.display(image)
+  st.image(image)
   description = 'Our warm, comfortable,'+style_chosen+' sweatsuit!'
   st.write(description)
   st.write('Price: $', price)
