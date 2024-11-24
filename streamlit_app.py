@@ -23,7 +23,7 @@ if style_chosen:
   size_list = my_dataframe.loc[my_dataframe['color_or_style'] == style_chosen, 'size_list'].iloc[0]
   upsells = my_dataframe.loc[my_dataframe['color_or_style'] == style_chosen, 'upsell'].iloc[0]
   
-  st.image(image)
+  st.image(image, width=400)
   description = 'Our warm, comfortable, '+style_chosen+' sweatsuit!'
   st.caption(description)
   st.write('Price: $', price)
