@@ -18,7 +18,7 @@ style_chosen = st.selectbox('Pick a sweatsuit colour or style:', my_dataframe['c
 
 if style_chosen:
   
-  image = my_dataframe.loc[my_dataframe['color_or_style'] == style_chosen, 'price', 'file_name', 'file_url', 'size_list', 'upsell'].iloc[0]
+  image = my_dataframe.loc[my_dataframe['color_or_style'] == style_chosen, 'file_url'].iloc[0]
   #price = my_dataframe.loc[my_dataframe['color_or_style'] == style_chosen, 'price', 'file_name', 'file_url', 'size_list', 'upsell'].iloc[0]
   #size_list = my_dataframe.loc[my_dataframe['color_or_style'] == style_chosen, 'price', 'file_name', 'file_url', 'size_list', 'upsell'].iloc[0]
   
